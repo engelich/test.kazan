@@ -61,4 +61,30 @@ a {
   font-family: 'Inter', sans-serif;
   
 }
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__pulse {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__rotateIn {
+  --animate-duration: 2s;
+}
+.pushReleaseFrom { animation-name: pushReleaseFrom }
+@keyframes pushReleaseFrom {
+    from {
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+    50% { transform: scale(.5, .5) }
+}
 

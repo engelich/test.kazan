@@ -1,26 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
   <link rel="icon" href="images/favicon.png">
-  <title>Document</title>
+  <title>Box</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/wow.min.js"></script>
+  <script>new WOW().init();
+  </script>
 </head>
+
+
 <body>
+
   <wrapper class="wrapper">
     <header class="header">
+      <div class="pop__up" id="pop_up">
+        <div class="pop__up-container">
+          <div id="pop_up_body" class="pop__up-body">
+            <p><b>Оставить заявку</b></p>
+            <form action="">
+              <input type="text" placeholder="Имя">
+              <input type="tel" class="art-stranger"  placeholder="Телефон">
+            </form>
+              <div class="pop_up-button-btn">
+              <buttton><a class="pop__up-btn" href="#">Оставить заявку</a><buttton>
+              </div>
+            
+            <div id="pop_up_close" class="pop__up-close">&#10006;</div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <nav class="header__nav">
           <img class="header__logo" src="images/logo.png" alt="img">
@@ -43,14 +60,14 @@
             </li>
           </ul>
           <button class="header__button">
-            <a href="#" class="header__btn header__btn-content">
+            <a href="#" class="header__btn header__btn-content"  id="open-pop-up" >
               заказать звонок
               <span></span>
               <span></span>
             </a>
           </button>
         </div>
-        <div class="header__mobil">
+        <div class="header__mobil ">
           <ul class="header__mobils">
             <li class="header__item-mobil">
               <a href="#" class="header__address-mobile">
@@ -63,12 +80,12 @@
               </a>
             </li>
             <li class="header__item-mobil">
-              <a href="tel:+79196105884" class="header__tel-mobile">
+              <a href="tel:+79196105884" class="header__tel-mobile cssanimation leBeat sequence">
                 +7 (812) 385-52-57
               </a>
             </li>
           </ul>
-          <button class="header__button">
+          <button class="header__button-mobil">
             <a href="#" class="header__btn header__btn-content">
               заказать звонок
               <span></span>
@@ -76,19 +93,23 @@
             </a>
           </button>
         </div>
+       
         <button class="header__burger">
           <span></span>   
         </button>
         </nav>
      
       </div>
-    
+      
     </header>
+   
     <main class="main">
+      
       <section class="promo">
+        
         <div class="container">
           <div class="promo__inner">
-            <div class="promo__left-content">
+            <div class="promo__left-content animate__animated animate__fadeInLeft">
               <h1 class="promo__title">
                 <span>Металлические корпуса</span><br> для вашего бизнеса с лазерной гравировкой: 
               </h1>
@@ -97,6 +118,7 @@
               </h2>
               <ul class="promo__info">
                 <li>
+                  <div class="promo__info-svg">
                   <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path style="mix-blend-mode:screen" d="M48.481 24.1957C48.4889 28.9907 47.0739 33.6802 44.415 37.6709C41.7562 41.6616 37.9731 44.7741 33.5445 46.6145C29.1158 48.4549 24.2406 48.9406 19.5358 48.0099C14.831 47.0793 10.508 44.7742 7.11394 41.3864C3.71987 37.9986 1.40724 33.6803 0.468696 28.978C-0.46985 24.2758 0.00787383 19.4008 1.84141 14.9701C3.67494 10.5394 6.78188 6.75197 10.7691 4.08719C14.7563 1.42242 19.4445 6.4221e-06 24.2405 0C30.6626 -8.59949e-06 36.8223 2.54791 41.3671 7.08435C45.912 11.6208 48.4705 17.775 48.481 24.1957Z" fill="url(#paint0_radial_1_1791)"/>
                     <defs>
@@ -118,10 +140,12 @@
                     </radialGradient>
                     </defs>
                     </svg>
+                  </div>
                     <p>На 100% сделано в России</p>
                 </li>
                 <li>
-                  <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div class="promo__info-svg">
+                  <svg  width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path style="mix-blend-mode:screen" d="M48.481 24.1957C48.4889 28.9907 47.0739 33.6802 44.415 37.6709C41.7562 41.6616 37.9731 44.7741 33.5445 46.6145C29.1158 48.4549 24.2406 48.9406 19.5358 48.0099C14.831 47.0793 10.508 44.7742 7.11394 41.3864C3.71987 37.9986 1.40724 33.6803 0.468696 28.978C-0.46985 24.2758 0.00787383 19.4008 1.84141 14.9701C3.67494 10.5394 6.78188 6.75197 10.7691 4.08719C14.7563 1.42242 19.4445 6.4221e-06 24.2405 0C30.6626 -8.59949e-06 36.8223 2.54791 41.3671 7.08435C45.912 11.6208 48.4705 17.775 48.481 24.1957Z" fill="url(#paint0_radial_1_1791)"/>
                     <defs>
                     <radialGradient id="paint0_radial_1_1791" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.2405 24.1957) scale(15.9091 15.9057)">
@@ -142,10 +166,12 @@
                     </radialGradient>
                     </defs>
                     </svg>
+                  </div>
                     <p>3-х этапный производственный 
                       контроль и качество стандарта ГОСТ  </p>
                 </li>
                 <li>
+                  <div class="promo__info-svg">
                   <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path style="mix-blend-mode:screen" d="M48.481 24.1957C48.4889 28.9907 47.0739 33.6802 44.415 37.6709C41.7562 41.6616 37.9731 44.7741 33.5445 46.6145C29.1158 48.4549 24.2406 48.9406 19.5358 48.0099C14.831 47.0793 10.508 44.7742 7.11394 41.3864C3.71987 37.9986 1.40724 33.6803 0.468696 28.978C-0.46985 24.2758 0.00787383 19.4008 1.84141 14.9701C3.67494 10.5394 6.78188 6.75197 10.7691 4.08719C14.7563 1.42242 19.4445 6.4221e-06 24.2405 0C30.6626 -8.59949e-06 36.8223 2.54791 41.3671 7.08435C45.912 11.6208 48.4705 17.775 48.481 24.1957Z" fill="url(#paint0_radial_1_1791)"/>
                     <defs>
@@ -167,9 +193,11 @@
                     </radialGradient>
                     </defs>
                     </svg>
+                  </div>
                     <p>Более 80 решений под любую задачу и сферу бизнеса</p>
                 </li>
                 <li>
+                  <div class="promo__info-svg">
                   <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path style="mix-blend-mode:screen" d="M48.481 24.1957C48.4889 28.9907 47.0739 33.6802 44.415 37.6709C41.7562 41.6616 37.9731 44.7741 33.5445 46.6145C29.1158 48.4549 24.2406 48.9406 19.5358 48.0099C14.831 47.0793 10.508 44.7742 7.11394 41.3864C3.71987 37.9986 1.40724 33.6803 0.468696 28.978C-0.46985 24.2758 0.00787383 19.4008 1.84141 14.9701C3.67494 10.5394 6.78188 6.75197 10.7691 4.08719C14.7563 1.42242 19.4445 6.4221e-06 24.2405 0C30.6626 -8.59949e-06 36.8223 2.54791 41.3671 7.08435C45.912 11.6208 48.4705 17.775 48.481 24.1957Z" fill="url(#paint0_radial_1_1791)"/>
                     <defs>
@@ -191,6 +219,7 @@
                     </radialGradient>
                     </defs>
                     </svg>
+                  </div>
                     <p>Запустим серийное производство в течение 5 дней</p>
                 </li>
               </ul>
@@ -235,7 +264,8 @@
               </button>
             </div>
             <div class="promo__image">
-              <img class="promo__img" src="images/metal-box.png" alt="images">
+              <div class="promo__image-inner">
+              <img class="promo__img promo__left-content wow animate__animated animate__pulse " src="images/metal-box.png" alt="images">
               <div class="promo__info-sub-img">
                 <div class="promo__info-sub-img-text">
                 <div class="promo__img-sub-title">
@@ -253,10 +283,11 @@
             </div>
           </div>
         </div>
+        </div>
       </section>
       <section class="advantage">
         <div class="container">
-          <div class="advantage__item">
+          <div class="advantage__item wow animate__animated animate__fadeInUp">
             <div class="advantage__inner">
               <img class="advantage__image" src="images/svg-1.svg" alt="img">
               <h3 class="advantage__title">
@@ -304,10 +335,10 @@
             </div>
           </div>
         </div>
-      <section class="top">
+      <section class="top wow animate__animated animate__fadeInUp">
         <div class="container">
          <h2 class="top__title">
-          <span>ТОП - 5 направлений которые </span>  мы для вас прокачаем
+          <span>ТОП - 5 направлений </span> которые мы для вас прокачаем
          </h2>
          <p class="top__text">
           Серийное производство по чертежам клиента или с нашей разработкой
@@ -473,7 +504,7 @@
             </div>
 
             <div class="catalog__color">
-              <div class="catalog__color-top">
+              <div class="catalog__color-top wow animate__animated animate__pulse ">
                 <img class="catalog__top-img" src="images/catalog-top.png" alt="image">
               </div>
               <div class="catalog__color-bottom">
@@ -489,7 +520,7 @@
               </div>
               </div>
 
-              <div class="catalog__info">
+              <div class="catalog__info wow animate__animated animate__fadeInUp">
                 <h2 class="catalog__sub-title">
                   ИБП стоечного и напольного размещения / Корпуса электротехнического оборудования в ассортименте
                 </h2>
@@ -541,9 +572,9 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer__title">
-          <h2>
-            Вот почему <span>96% клиентов заказывают у нас</span> во второй раз
+        <div class="footer__title ">
+          <h2 class="wow cssanimation pushReleaseFrom">
+            Вот почему <span>96% клиентов</span> <br><span>заказывают у нас</span> во второй раз
           </h2>
         </div>
         <div class="footer__text">
@@ -554,7 +585,7 @@
         <div class="footer__inner">
           <div class="footer__box">
 
-            <svg class="footer__svg-pin-one" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer__svg-pin-one wow animate__animated animate__rotateIn animate__delay-1s	" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M23.2628 24.7132C25.832 22.6994 27.6199 19.8557 28.3202 16.6696C29.0204 13.4836 28.5894 10.1534 27.1009 7.25L5.77824 24.2873C8.1998 26.3542 11.2603 27.525 14.4448 27.6026C17.6292 27.6801 20.7432 26.6598 23.2628 24.7132ZM1.94012 20.4539C0.632016 17.6042 0.315341 14.3995 1.04034 11.3494C1.76535 8.29922 3.49046 5.57873 5.94141 3.62036C8.39237 1.662 11.4285 0.578202 14.567 0.541289C17.7056 0.504378 20.7664 1.51647 23.2628 3.41665L1.94012 20.4539Z" fill="url(#paint0_radial_1_1969)"/>
               <defs>
               <radialGradient id="paint0_radial_1_1969" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.9558 14.3234) rotate(127.744) scale(15.5536 15.5584)">
@@ -570,7 +601,7 @@
               </defs>
               </svg>
 
-              <svg class="footer__svg-pin" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="footer__svg-pin  " width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23.2628 24.7132C25.832 22.6994 27.6199 19.8557 28.3202 16.6696C29.0204 13.4836 28.5894 10.1534 27.1009 7.25L5.77824 24.2873C8.1998 26.3542 11.2603 27.525 14.4448 27.6026C17.6292 27.6801 20.7432 26.6598 23.2628 24.7132ZM1.94012 20.4539C0.632016 17.6042 0.315341 14.3995 1.04034 11.3494C1.76535 8.29922 3.49046 5.57873 5.94141 3.62036C8.39237 1.662 11.4285 0.578202 14.567 0.541289C17.7056 0.504378 20.7664 1.51647 23.2628 3.41665L1.94012 20.4539Z" fill="url(#paint0_radial_1_1969)"/>
                 <defs>
                 <radialGradient id="paint0_radial_1_1969" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.9558 14.3234) rotate(127.744) scale(15.5536 15.5584)">
@@ -643,7 +674,7 @@
             </div>
 
           </div>
-          <div class="footer__image-robot">
+          <div class="footer__image-robot wow animate__animated animate__bounce">
           <img class="footer__fire" src="images/fire.svg" alt="image">
           <img class="footer__image" src="images/robot.png" alt="image" >
         </div>
@@ -651,6 +682,31 @@
       </div>
     </footer>
   </wrapper>
+  
+  
+  <script src="js/jquery-3.7.0.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script src="js/maska-nomera.js" type="text/javascript" ></script>
+
+      <script>
+$('.art-stranger').mask('+7 (999) 999-99-99');
+
+$.fn.setCursorPosition = function(pos) {
+  if ($(this).get(0).setSelectionRange) {
+    $(this).get(0).setSelectionRange(pos, pos);
+  } else if ($(this).get(0).createTextRange) {
+    var range = $(this).get(0).createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', pos);
+    range.moveStart('character', pos);
+    range.select();
+  }
+};
+
+
+$('input[type="tel"]').click(function(){
+    $(this).setCursorPosition(4);  
+  });
+</script>
 </body>
 </html>
